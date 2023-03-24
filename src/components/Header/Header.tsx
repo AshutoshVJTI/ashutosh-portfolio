@@ -43,11 +43,11 @@ const Header = () => {
         <Link href="/">
           <div className="navbar-brand">
             <Image
-              src="/logo.png"
+              src="/assets/images/logo.svg"
               alt="Logo"
               className="img-fluid"
-              width="250"
-              height="250"
+              width="50"
+              height="50"
             />
           </div>
         </Link>

@@ -29,14 +29,14 @@ const ProjectCard: FC<Props> = ({ project }) => {
             target="_blank"
             className="text-white display-6"
           >
-            <i className="bi bi-github"></i>
+            <i className="bi bi-github" />
           </a>
           <a
             href={project.deployUrl}
             target="_blank"
             className="text-white display-6"
           >
-            <i className="bi bi-box-arrow-up-right"></i>
+            <i className="bi bi-box-arrow-up-right" />
           </a>
         </div>
       </div>

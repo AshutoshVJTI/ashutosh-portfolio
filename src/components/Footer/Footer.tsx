@@ -1,61 +1,33 @@
+import Link from "next/link";
+import Typo from "../Typo/Typo";
+import styles from "./Footer.module.css";
+
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white py-3">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-4 mb-3 mb-md-0">
-            <h5>Connect with me</h5>
-            <ul className="list-unstyled">
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/your-linkedin-profile/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/your-github-username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a href="mailto:youremail@example.com">Email</a>
-              </li>
-              <li>
-                <a
-                  href="https://twitter.com/your-twitter-profile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Twitter
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-md-4 mb-3 mb-md-0">
-            <h5>Other Links</h5>
-            <ul className="list-unstyled">
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Terms of Use</a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-md-4">
-            <h5>About This Site</h5>
-            <p>
-              This is a portfolio website built using Next.js, React, TypeScript
-              and Bootstrap.
-            </p>
-          </div>
+    <footer className={`${styles.root} text-white py-3`}>
+      <div className="container d-flex justify-content-around align-items-center" style={{height: '5rem'}}>
+        <Typo fontFamily="Spline_Sans_Mono">
+          Website made by Ashutosh Mathore
+        </Typo>
+        <div className="d-flex gap-4">
+          <Link
+            href="https://www.linkedin.com/in/ashutosh-mathore/"
+            target="_blank"
+          >
+            <i className="bi bi-linkedin text-white h4" />
+          </Link>
+          <Link href="https://github.com/AshutoshVJTI" target="_blank">
+            <i className="bi bi-github text-white h4" />
+          </Link>
+          <Link href="mailto:mathoreashutosh@gmail.com" target="_blank">
+            <i className="bi bi-envelope-at-fill text-white h4" />
+          </Link>
+          <Link href="https://twitter.com/Ashutosh0w0" target="_blank">
+            <i className="bi bi-twitter text-white h4" />
+          </Link>
+          <Link href="https://www.instagram.com/a.shoe.toast/" target="_blank">
+            <i className="bi bi-instagram text-white h4" />
+          </Link>
         </div>
       </div>
     </footer>

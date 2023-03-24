@@ -6,6 +6,7 @@
   position: relative;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 5rem;
 }
 
 .heading::before {
