@@ -1,0 +1,42 @@
+.root {
+  background-color: #212121;
+}
+
+.scrolled {
+  background-color: #333333;
+  height: 60px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.link {
+  text-decoration: none;
+  margin-left: 30px;
+  list-style: none;
+  color: #00ffc8;
+  font-size: 20px;
+  position: relative;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 0;
+  height: 2px;
+  left: 0;
+  background-color: #00ffc8;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  right: 0;
+  background-color: #00ffc8;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}

@@ -1,0 +1,18 @@
+.button {
+  color: #00ffc8;
+  font-size: 18px;
+  border: 2px solid #00ffc8;
+  padding: 8px 12px;
+  border-radius: 7px;
+  position: relative;
+  width: max-content;
+}
+
+.button:hover {
+  content: "";
+  color: #212121;
+  border: 2px solid #00ffc8;
+  background-color: #00ffc8;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}

@@ -1,0 +1,20 @@
+.heading {
+  width: max-content;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.heading::before {
+  content: "";
+  bottom: -4px;
+  position: absolute;
+  height: 7px;
+  width: 70%;
+  background-color: #00ffc8;
+  left: 50%;
+  transform: translateX(-50%);
+}
