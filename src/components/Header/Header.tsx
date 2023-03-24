@@ -75,8 +75,9 @@ const Header = () => {
           ))}
           <Button
             label="DOWNLOAD CV"
-            href="/cv.pdf"
+            href="/assets/docs/Ashutosh_Mathore_Resume.pdf"
             download
+            targetBlank
           />
         </div>
       </div>
