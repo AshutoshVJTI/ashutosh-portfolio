@@ -10,13 +10,23 @@ const About = () => {
         <div className="row">
           <div className="col-md-4 mb-4 mb-md-0">
             <div className="about-img">
-              <Image
-                src="/assets/images/profile.jpg"
-                alt="Ashutosh Mathore"
-                width={400}
-                height={400}
-                className="img-fluid rounded"
-              />
+              <div className="box">
+                <div className="hover-point"></div>
+                <div className="hover-point"></div>
+                <div className="hover-point"></div>
+                <div className="hover-point"></div>
+                <div className="hover-point"></div>
+                <div className="hover-point"></div>
+                <div className="hover-point"></div>
+                <div className="hover-point"></div>
+                <div
+                  className="box-contents"
+                  style={{
+                    background:
+                      "url(/assets/images/profile.jpg) 50% 50% / cover no-repeat",
+                  }}
+                ></div>
+              </div>
             </div>
           </div>
           <div className="col-md-8">
