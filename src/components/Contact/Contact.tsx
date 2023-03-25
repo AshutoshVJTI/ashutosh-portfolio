@@ -21,11 +21,6 @@ const Contact = () => {
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-      process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-    );
     if (
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
