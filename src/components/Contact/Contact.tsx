@@ -21,7 +21,11 @@ const Contact = () => {
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(e.currentTarget);
+    console.log(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+    );
     if (
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
@@ -117,7 +121,7 @@ const Contact = () => {
             ></textarea>
           </div>
           <button className={styles.submitBtn} type="submit">
-          <Typo fontFamily="Oswald">SUBMIT</Typo>
+            <Typo fontFamily="Oswald">SUBMIT</Typo>
           </button>
         </form>
       </div>
