@@ -13,7 +13,7 @@
   top: -165px;
   position: absolute;
   height: 10rem;
-  width: 2px;
+  width: 1.5px;
   background-color: #fff;
   left: 50%;
   transform: translateX(-50%);
@@ -24,13 +24,4 @@
   width: 40px;
   height: 40px;
   margin-bottom: 10px;
-  text-align: center;
-  color: #fff;
-  background-color: #333;
-  border-radius: 50%;
-  transition: background-color 0.3s;
-}
-
-.icon:hover {
-  background-color: #666;
 }

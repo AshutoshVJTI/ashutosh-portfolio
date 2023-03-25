@@ -17,6 +17,19 @@
   background-color: #212121;
 }
 
+.submitBtnDisabled {
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 18px;
+  border: 2px solid #fff;
+  padding: 8px 12px;
+  border-radius: 7px;
+  position: relative;
+  width: max-content;
+  background-color: #212121;
+}
+
 .submitBtn:hover {
   content: "";
   color: #212121;

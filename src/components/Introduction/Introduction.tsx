@@ -11,7 +11,7 @@ const Introduction = () => {
         <div className="display-4" style={{ fontWeight: 600 }}>
           Hello, <br /> I&apos;m{" "}
           <span className="greenText">Ashutosh Mathore</span>.<br />
-          I&apos;m a <span className="greenText">Fullstack</span> Web Developer.
+          I&apos;m a <span className="greenText">Frontend</span> Web Developer.
         </div>
         <div className="d-flex flex-column gap-4 mt-4">
           <div>
@@ -20,8 +20,8 @@ const Introduction = () => {
                 key={tech.id}
                 src={"/assets" + tech.src}
                 alt={tech.name}
-                width={100}
-                height={100}
+                width={80}
+                height={80}
               />
             ))}
           </div>

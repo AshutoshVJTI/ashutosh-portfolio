@@ -11,7 +11,7 @@
 
 .heading::before {
   content: "";
-  bottom: -4px;
+  bottom: 0px;
   position: absolute;
   height: 7px;
   width: 70%;

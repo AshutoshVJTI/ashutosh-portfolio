@@ -8,7 +8,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.link {
+.navLink {
   text-decoration: none;
   margin-left: 30px;
   list-style: none;
@@ -17,26 +17,41 @@
   position: relative;
 }
 
-.link::before {
+.navLink:hover {
+  color: #00ffc8;
+}
+
+.navLink::before {
   content: "";
-  position: absolute;
   top: -4px;
+  position: absolute;
+  height: 3px;
   width: 0;
-  height: 2px;
-  left: 0;
   background-color: #00ffc8;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  visibility: hidden;
 }
 
-.link::after {
+.navLink:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+.navLink::after {
   content: "";
-  position: absolute;
   bottom: -4px;
+  position: absolute;
+  height: 3px;
   width: 0;
-  height: 2px;
   right: 0;
   background-color: #00ffc8;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  visibility: hidden;
+}
+
+.navLink:hover::after {
+  visibility: visible;
+  width: 100%;
 }

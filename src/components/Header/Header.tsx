@@ -43,31 +43,17 @@ const Header = () => {
         <Link href="/">
           <div className="navbar-brand">
             <Image
-              src="/assets/images/logo.svg"
+              src="/assets/images/logo.png"
               alt="Logo"
               className="img-fluid"
-              width="50"
+              width="300"
               height="50"
             />
           </div>
         </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div
-          className="collapse navbar-collapse align-items-center justify-content-end"
-          id="navbarNav"
-        >
+        <div className="collapse navbar-collapse align-items-center justify-content-end">
           {navLinks.map((link) => (
-            <Link key={link.id} href={link.href} onClick={smoothScroll}>
+            <Link key={link.id} href={link.href} onClick={smoothScroll} className={styles.navLink}>
               <Typo className={styles.link} fontFamily="Oswald">
                 {link.title}
               </Typo>
@@ -78,6 +64,7 @@ const Header = () => {
             href="/assets/docs/Ashutosh_Mathore_Resume.pdf"
             download
             targetBlank
+            className="ms-5"
           />
         </div>
       </div>

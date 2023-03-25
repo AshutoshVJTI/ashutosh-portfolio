@@ -11,6 +11,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isBtnLoading, setIsBtnLoading] = useState(false);
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -21,6 +22,7 @@ const Contact = () => {
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsBtnLoading(true);
     if (
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
@@ -39,13 +41,15 @@ const Contact = () => {
             Swal.fire({
               icon: "success",
               title: "Message Sent Successfully",
-            }).then(() => {
-              setMessageDetails({
-                name: "",
-                email: "",
-                message: "",
+            })
+              .then(() => setIsBtnLoading(false))
+              .then(() => {
+                setMessageDetails({
+                  name: "",
+                  email: "",
+                  message: "",
+                });
               });
-            });
           },
           (error) => {
             console.log(error.text);
@@ -115,8 +119,16 @@ const Contact = () => {
               onChange={handleChange}
             ></textarea>
           </div>
-          <button className={styles.submitBtn} type="submit">
-            <Typo fontFamily="Oswald">SUBMIT</Typo>
+          <button
+            className={
+              !isBtnLoading ? styles.submitBtn : styles.submitBtnDisabled
+            }
+            type="submit"
+            disabled={isBtnLoading}
+          >
+            <Typo fontFamily="Oswald">
+              {!isBtnLoading ? "SUBMIT" : "SUBMITTING..."}
+            </Typo>
           </button>
         </form>
       </div>

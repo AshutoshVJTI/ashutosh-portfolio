@@ -8,15 +8,20 @@ interface ButtonProps {
   href: string;
   targetBlank?: boolean;
   download?: boolean;
+  disabled?: boolean;
   className?: string;
 }
 
 const Button = (props: ButtonProps) => {
-  const { label, href, targetBlank, download, className } = props;
+  const { label, href, targetBlank, download, disabled, className } = props;
   return (
     <Link
       href={href}
-      className={`${styles.button} ${className} nav-link btn btn-outline-light ms-3`}
+      className={`${
+        styles.button
+      } ${className} nav-link btn btn-outline-light ${
+        disabled ? "disabled" : ""
+      }}`}
       target={targetBlank ? "_blank" : ""}
       download={download}
     >
