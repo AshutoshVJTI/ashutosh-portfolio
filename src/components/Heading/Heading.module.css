@@ -19,3 +19,14 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+@media only screen and (max-width: 768px) {
+  .heading {
+    margin-bottom: 5rem;
+  }
+
+  .heading::before {
+    height: 10px;
+    width: 100%;
+  }
+}

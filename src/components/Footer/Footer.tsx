@@ -5,9 +5,9 @@ import styles from "./Footer.module.css";
 const Footer = () => {
   return (
     <footer className={`${styles.root} text-white py-3`}>
-      <div className="container d-flex justify-content-around align-items-center" style={{height: '5rem'}}>
-        <Typo fontFamily="Spline_Sans_Mono">
-          Website made by Ashutosh Mathore
+      <div className="container d-flex flex-column flex-lg-row justify-content-between align-items-center">
+        <Typo fontFamily="Spline_Sans_Mono" className="mb-3 mb-lg-0">
+          Made with ❤️ by Ashutosh Mathore
         </Typo>
         <div className="d-flex gap-4">
           <Link

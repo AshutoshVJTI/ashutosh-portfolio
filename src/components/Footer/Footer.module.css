@@ -1,3 +1,11 @@
 .root {
   background-color: #252933;
 }
+
+@media (min-width: 992px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

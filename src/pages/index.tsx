@@ -8,6 +8,7 @@ import Projects from "../components/Projects/Projects";
 import ContactMe from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 import FloatingIcons from "@/components/FloatingIcons/FloatingIcons";
+import { useEffect, useState } from "react";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -15,6 +16,10 @@ const raleway = Raleway({
 });
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
   return (
     <>
       <Head>
@@ -28,7 +33,7 @@ export default function Home() {
 
         <main className={`${raleway.className} container`}>
           <Introduction />
-          <FloatingIcons />
+          {!isMobile && <FloatingIcons />}
           <About />
           <Projects />
           <ContactMe />

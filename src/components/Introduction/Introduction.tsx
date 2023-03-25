@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./Introduction.module.css";
 import { techStack } from "../../data/techStack";
 import Button from "../Button/Button";
@@ -7,12 +6,12 @@ import Button from "../Button/Button";
 const Introduction = () => {
   return (
     <section>
-      <div className={`${styles.root} container`}>
-        <div className="display-4" style={{ fontWeight: 600 }}>
+      <div className={`${styles.root} container-fluid`}>
+        <h1 className="fw-600">
           Hello, <br /> I&apos;m{" "}
           <span className="greenText">Ashutosh Mathore</span>.<br />
           I&apos;m a <span className="greenText">Frontend</span> Web Developer.
-        </div>
+        </h1>
         <div className="d-flex flex-column gap-4 mt-4">
           <div>
             {techStack.map((tech) => (

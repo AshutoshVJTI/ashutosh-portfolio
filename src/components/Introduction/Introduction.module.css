@@ -3,3 +3,11 @@
   margin-top: 110px;
   margin-left: 100px;
 }
+
+@media screen and (max-width: 768px) {
+  .root {
+    height: calc(100vh - 200px);
+    /* margin-bottom: 5rem; */
+    margin-left: 0;
+  }
+}

@@ -63,3 +63,24 @@
   -webkit-box-shadow: 0 0 0 30px #0c0c0c inset;
   -webkit-text-fill-color: #fff;
 }
+
+@media (max-width: 768px) {
+  .root {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .form-control {
+    font-size: 16px;
+  }
+
+  .submitBtn {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+
+  .submitBtnDisabled {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+}

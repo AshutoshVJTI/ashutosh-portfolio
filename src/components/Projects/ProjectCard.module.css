@@ -1,8 +1,27 @@
 .root {
   background-color: #1c1c1c;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
     0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
     0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
-  padding: 0 20px;
+  padding: 0 10px;
+}
+
+@media (min-width: 768px) {
+  .root {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .w-50 {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  .w-50:last-child {
+    margin-right: 0;
+  }
 }

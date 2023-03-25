@@ -5,12 +5,15 @@ import styles from "./Projects.module.css";
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-5" style={{marginBottom: '3.5rem'}}>
+    <section id="projects" className="py-5" style={{ marginBottom: "3.5rem" }}>
       <div className="container">
         <Heading title="PROJECTS" />
         <div className="row">
           {projectsData.map((project) => (
-            <div key={project.id} className={styles.project}>
+            <div
+              key={project.id}
+              className={`col-12 col-md-6 col-lg-4 ${styles.project}`}
+            >
               <ProjectCard project={project} />
             </div>
           ))}

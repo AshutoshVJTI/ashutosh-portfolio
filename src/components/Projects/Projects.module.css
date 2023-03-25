@@ -1,4 +1,9 @@
 .project {
-  width: 75%;
   margin: 20px auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .project {
+    width: 75%;
+  }
 }
