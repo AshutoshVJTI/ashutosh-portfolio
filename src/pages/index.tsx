@@ -7,6 +7,7 @@ import About from "../components/About/About";
 import Projects from "../components/Projects/Projects";
 import ContactMe from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
+import FloatingIcons from "@/components/FloatingIcons/FloatingIcons";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function Home() {
 
         <main className={`${raleway.className} container`}>
           <Introduction />
+          <FloatingIcons />
           <About />
           <Projects />
           <ContactMe />

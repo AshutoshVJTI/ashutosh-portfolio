@@ -3,6 +3,7 @@ import Heading from "../Heading/Heading";
 import styles from "./Contact.module.css";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
+import Typo from "../Typo/Typo";
 
 const Contact = () => {
   const [messageDetails, setMessageDetails] = useState({
@@ -116,7 +117,7 @@ const Contact = () => {
             ></textarea>
           </div>
           <button className={styles.submitBtn} type="submit">
-            SUBMIT
+          <Typo fontFamily="Oswald">SUBMIT</Typo>
           </button>
         </form>
       </div>
