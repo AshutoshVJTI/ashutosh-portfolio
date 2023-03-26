@@ -103,3 +103,7 @@ body {
   transform-origin: left bottom;
   transform: perspective(1000px) rotateX(-10deg) rotateY(10deg) rotateZ(2deg);
 }
+
+.btn:hover {
+  border: none;
+}

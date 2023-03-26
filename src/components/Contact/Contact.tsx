@@ -90,7 +90,7 @@ const Contact = () => {
               htmlFor="email"
               className={`${styles["form-label"]} form-label`}
             >
-              Email address
+              Email
             </label>
             <input
               type="email"

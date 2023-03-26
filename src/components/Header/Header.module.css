@@ -55,3 +55,22 @@
   visibility: visible;
   width: 100%;
 }
+
+.mobileMenu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: all 0.3s ease;
+}
+
+.mobileMenuOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0%);
+}
+
+@media (max-width: 768px) {
+  .navLink {
+    margin-left: 0;
+  }
+}

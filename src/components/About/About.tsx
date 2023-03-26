@@ -39,7 +39,7 @@ const About = () => {
               </p>
               <div style={{ color: "#8891b0" }}>
                 <p>Other technologies I&apos;m interested in:</p>
-                <ul>
+                <ul style={{ textAlign: "start" }}>
                   <li>Node.js</li>
                   <li>MongoDB</li>
                   <li>Artificial Intelligence</li>

@@ -1,8 +1,16 @@
+.root {
+  margin-bottom: 4rem;
+}
+
 .project {
   margin: 20px auto;
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
+  .root {
+    margin-bottom: 10rem;
+  }
+
   .project {
     width: 75%;
   }

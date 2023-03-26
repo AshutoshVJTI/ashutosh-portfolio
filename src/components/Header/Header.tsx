@@ -7,7 +7,10 @@ import { useEffect, useState } from "react";
 import Button from "../Button/Button";
 
 const Header = () => {
+  
+  const [isMobile, setIsMobile] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +22,10 @@ const Header = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, [])
 
   const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -33,42 +40,95 @@ const Header = () => {
   };
 
   return (
-    <header
-      className={`${styles.root} navbar navbar-expand-lg sticky-top ${
-        isScrolled && styles.scrolled
-      }`}
-      style={{ height: `100px` }}
-    >
-      <div className="container">
-        <Link href="/">
-          <div className="navbar-brand">
-            <Image
-              src="/assets/images/logo.png"
-              alt="Logo"
-              className="img-fluid"
-              width="300"
-              height="50"
+    <div className="sticky-top">
+      <header
+        className={`${styles.root} navbar navbar-expand-lg  position-relative ${
+          isScrolled && styles.scrolled
+        }`}
+        style={{ height: `100px` }}
+      >
+        <div className="container">
+          <Link href="/">
+            <div className="navbar-brand">
+              <Image
+                src="/assets/images/logo.png"
+                alt="Logo"
+                className="img-fluid"
+                width={isMobile ? 250 : 300}
+                height={isMobile ? 35 : 50}
+              />
+            </div>
+          </Link>
+          <div
+            className={`collapse navbar-collapse align-items-center justify-content-end`}
+          >
+            {navLinks.map((link) => (
+              <Link
+                key={link.id}
+                href={link.href}
+                onClick={smoothScroll}
+                className={styles.navLink}
+              >
+                <Typo className={styles.link} fontFamily="Oswald">
+                  {link.title}
+                </Typo>
+              </Link>
+            ))}
+            <Button
+              label="DOWNLOAD CV"
+              href="/assets/docs/Ashutosh_Mathore_Resume.pdf"
+              download
+              targetBlank
+              className="ms-5"
             />
           </div>
-        </Link>
-        <div className="collapse navbar-collapse align-items-center justify-content-end">
-          {navLinks.map((link) => (
-            <Link key={link.id} href={link.href} onClick={smoothScroll} className={styles.navLink}>
-              <Typo className={styles.link} fontFamily="Oswald">
-                {link.title}
-              </Typo>
-            </Link>
-          ))}
-          <Button
-            label="DOWNLOAD CV"
-            href="/assets/docs/Ashutosh_Mathore_Resume.pdf"
-            download
-            targetBlank
-            className="ms-5"
-          />
+        </div>
+        {isMobile && (
+          <button
+            className="btn position-absolute end-0 text-white"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            style={{ zIndex: 1050 }}
+          >
+            <i
+              className={`${
+                !mobileMenuOpen ? "bi bi-list h3 m-2" : "bi bi-x-lg h3 m-2"
+              }`}
+              style={{ color: "#00ffc8 " }}
+            />
+          </button>
+        )}
+      </header>
+      <div
+        className={`position-absolute w-50 end-0 top-0 bg-dark ${
+          styles.mobileMenu
+        } ${mobileMenuOpen ? `${styles.mobileMenuOpen}` : ""}`}
+        style={{ zIndex: 1030, height: "max-content"  }}
+      >
+        <div className="container">
+          <div className={`d-flex flex-column align-items-center gap-3 py-5`}>
+            {navLinks.map((link) => (
+              <Link
+                key={link.id}
+                href={link.href}
+                onClick={smoothScroll}
+                className={styles.navLink}
+              >
+                <Typo className={styles.link} fontFamily="Oswald">
+                  {link.title}
+                </Typo>
+              </Link>
+            ))}
+            <Button
+              label="DOWNLOAD CV"
+              href="/assets/docs/Ashutosh_Mathore_Resume.pdf"
+              download
+              targetBlank
+              className="mt-3"
+            />
+          </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 
