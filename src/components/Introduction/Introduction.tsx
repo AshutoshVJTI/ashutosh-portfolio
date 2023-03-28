@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./Introduction.module.css";
 import { techStack } from "../../data/techStack";
 import Button from "../Button/Button";
+import Link from "next/link";
 
 const Introduction = () => {
   return (
@@ -15,13 +16,14 @@ const Introduction = () => {
         <div className="d-flex flex-column gap-4 mt-4">
           <div>
             {techStack.map((tech) => (
-              <Image
-                key={tech.id}
-                src={"/assets" + tech.src}
-                alt={tech.name}
-                width={80}
-                height={80}
-              />
+              <Link href={tech.href} key={tech.id} target="_blank">
+                <Image
+                  src={"/assets" + tech.src}
+                  alt={tech.name}
+                  width={80}
+                  height={80}
+                />
+              </Link>
             ))}
           </div>
           <Button
