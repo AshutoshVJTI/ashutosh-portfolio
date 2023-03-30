@@ -54,7 +54,7 @@ const Header = () => {
                 src="/assets/images/logo.png"
                 alt="Logo"
                 className="img-fluid"
-                width={isMobile ? 250 : 300}
+                width={isMobile ? 300 : 400}
                 height={isMobile ? 35 : 50}
               />
             </div>
