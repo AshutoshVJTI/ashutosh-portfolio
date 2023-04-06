@@ -49,13 +49,13 @@ const Header = () => {
       >
         <div className="container">
           <Link href="/">
-            <div className="navbar-brand">
+            <div>
               <Image
                 src="/assets/images/logo.png"
                 alt="Logo"
-                className="img-fluid"
-                width={isMobile ? 300 : 400}
-                height={isMobile ? 35 : 50}
+                className="img-fluid ms-3"
+                width={isMobile ? 45 : 60}
+                height={isMobile ? 45 : 60}
               />
             </div>
           </Link>
