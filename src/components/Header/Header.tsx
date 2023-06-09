@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import Button from "../Button/Button";
 
 const Header = () => {
-  
   const [isMobile, setIsMobile] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,7 +24,7 @@ const Header = () => {
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 768);
-  }, [])
+  }, []);
 
   const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -88,11 +87,12 @@ const Header = () => {
             className="btn position-absolute end-0 text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             style={{ zIndex: 1050 }}
+            aria-label={!mobileMenuOpen ? "Open the menu" : "Close the menu"}
           >
             <i
-              className={`${
+              className={
                 !mobileMenuOpen ? "bi bi-list h3 m-2" : "bi bi-x-lg h3 m-2"
-              }`}
+              }
               style={{ color: "#00ffc8 " }}
             />
           </button>
@@ -102,7 +102,7 @@ const Header = () => {
         className={`position-absolute w-50 end-0 top-0 bg-dark ${
           styles.mobileMenu
         } ${mobileMenuOpen ? `${styles.mobileMenuOpen}` : ""}`}
-        style={{ zIndex: 1030, height: "max-content"  }}
+        style={{ zIndex: 1030, height: "max-content" }}
       >
         <div className="container">
           <div className={`d-flex flex-column align-items-center gap-3 py-5`}>

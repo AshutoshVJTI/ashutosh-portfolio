@@ -125,6 +125,7 @@ const Contact = () => {
             }
             type="submit"
             disabled={isBtnLoading}
+            aria-label="Submit the form"
           >
             <Typo fontFamily="Oswald">
               {!isBtnLoading ? "SUBMIT" : "SUBMITTING..."}
