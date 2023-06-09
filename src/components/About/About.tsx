@@ -1,6 +1,8 @@
-import Image from "next/image";
+import dynamic from "next/dynamic";
 import Heading from "../Heading/Heading";
 import styles from "./About.module.css";
+
+const DynamicImage = dynamic(() => import("next/image"), { ssr: false });
 
 const About = () => {
   return (
@@ -19,13 +21,14 @@ const About = () => {
                 <div className="hover-point"></div>
                 <div className="hover-point"></div>
                 <div className="hover-point"></div>
-                <div
+                <DynamicImage
+                  src="/assets/images/profile.jpg"
+                  alt="Profile Picture"
+                  layout="fill"
+                  objectFit="cover"
+                  quality={100}
                   className="box-contents"
-                  style={{
-                    background:
-                      "url(/assets/images/profile.jpg) 50% 50% / cover no-repeat",
-                  }}
-                ></div>
+                />
               </div>
             </div>
           </div>
